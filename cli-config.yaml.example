@@ -828,3 +828,31 @@ display:
 #   # Names and usernames are NOT affected (user-chosen, publicly visible).
 #   # Routing/delivery still uses the original values internally.
 #   redact_pii: false
+
+# =============================================================================
+# Borge Agent — cognitive layer (affective, Bayesian, memory, inference)
+# =============================================================================
+# borge:
+#   # Affective state (Russell circumplex)
+#   affective:
+#     enabled: true
+#     loyalty:
+#       enabled: true          # cross-session emotional baseline
+#
+#   # Bayesian belief tracking
+#   beliefs:
+#     enabled: true
+#     entropy_injection_threshold: 0.5   # inject belief summary above this entropy (bits)
+#
+#   # Active inference — Expected Free Energy tool ranking
+#   active_inference:
+#     enabled: true
+#
+#   # Memory consolidation (runs on session end)
+#   memory:
+#     consolidation:
+#       enabled: true
+#     knowledge_graph:
+#       enabled: true
+#     forgetting:
+#       prune_threshold: 2.0   # forget_score above this → prune
